@@ -4,3 +4,5 @@ description: development with pleasure
 url: "https://jarektkaczyk.github.io"
 markdown: GFM
 highlighter: rouge
+
+theme: jekyll-theme-cayman
