@@ -7,7 +7,7 @@ It helps in designing the code and allows deferring implementation details so th
 
 **TLDR;**
 
-1. [define functional methods, you **MUST NEVER** define implementation details as part of the interface](#why-not-setters--fluent-api)
+1. [define functional methods, you **MUST NEVER** define implementation details as part of the interface](#why-not-setters-amp-fluent-api)
     - you **MUST NEVER** define setters on an interface - they are ALWAYS implementation detail
     - you **MUST NEVER** define interface for so-called *fluent api/interface* (object returning itself) - *fluent api* is ALWAYS implementation detail
 4. [you **SHOULD** avoid using associative arrays in both input & output - prefer VOs/POPOs/DTOs and Entities](#why-types-rather-than-associative-arrays)
