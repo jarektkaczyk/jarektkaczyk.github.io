@@ -1,0 +1,6 @@
+#Jekyll configuration
+name: SoftOnSofa.com
+description: development with pleasure
+url: "https://jarektkaczyk.github.io"
+markdown: GFM
+highlighter: rouge
