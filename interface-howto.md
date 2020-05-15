@@ -116,7 +116,7 @@ class Transferwise implements TransferService
 // 2
 class Transferwise implements TransferService
 {
-    function **construct(TransferWise\Client $client)
+    function __construct(TransferWise\Client $client)
     {
         $this->client = $client;
     }
@@ -138,7 +138,7 @@ class Transferwise implements TransferService
 // 3
 class Transferwise implements TransferService
 {
-    function **construct(TransferWise\Client $client, Transferwise\Config $config)
+    function __construct(TransferWise\Client $client, Transferwise\Config $config)
     {
         $this->client = $client;
         $this->config = $config;
@@ -320,4 +320,4 @@ There is no downside to this approach:
 
 - performance-wise we don't need to worry about primitives vs objects
 - creating a class takes just a few seconds more that an array
-- we can write less tests, having strict types in the objects
+- we can write less tests, having strict types on the objects
