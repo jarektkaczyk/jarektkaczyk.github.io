@@ -238,7 +238,7 @@ $transferService
 ```
 
 Such approach breaks rule 1 completely and creates very rigid structure.
-That is because the ONLY thing we care about from user's perspective is `send()` method, and having *fluent api* defined on the interface binds us to this approach only for all implementations.
+That is because the ONLY thing we care about from user's perspective is `send()` method, and having *fluent api* defined on the interface binds us to this approach for all implementations.
 
 You can still use *fluent api* if this is your preferred way. It's great for **builder** objects, but not for functional services.
 
@@ -288,7 +288,7 @@ public function getTransferData(): array
 }
 ```
 
-##### Why array is really BAD
+#### Why array is really BAD
 
 1. consuming array as output from a class - you HAVE TO KNOW the keys inside -> you need to waste time to find the definition and/or usage for the array. As array is just a primitive type, IDE won't be able to offer FIND REFERENCES to help you.
 2. usually it requires `if` and `fallback` values: `$array['key'] ?? null` or `$array['key'] ?? 'default'`
@@ -296,7 +296,7 @@ public function getTransferData(): array
 4. static analysis tools in CI won't catch errors just like IDE
 5. if you need to change/add key to the array, you waste time finding where it is used - again, no FIND REFERENCES in IDE
 
-##### Why object is helpful
+#### Why object is helpful
 
 By implementing object, even simple POPO, you get rid of ALL of those problems:
 
