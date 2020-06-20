@@ -44,7 +44,7 @@ Alice wasn’t too familiar with the structure of Resources, so after reading th
 
 Spot on! During browsing the docs page, she noticed something familiar: `when($this->isAdmin(), ...)` – they had the same construct in their code. However, both she and Leo missed the important bit in the beginning:
 
-IMAGE
+<img width="658" alt="image" src="https://user-images.githubusercontent.com/6928818/85195280-b28bc680-b303-11ea-9af1-95e2140e0858.png">
 
 That moment Leo realized he was screwed…
 
