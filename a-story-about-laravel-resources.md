@@ -1,3 +1,5 @@
+# A story about laravel resources
+
 Leo is a brilliant developer. He turns every idea into code in no time. He’s prepared for any task thrown at him and dives into coding straight away, delivering successfully and rapidly.
 
 These days he’s been working on a public API for the application he and his team is building. A few resources with a few endpoints were not a big challenge for Leo obviously. He caught some models in the wild and turned them into **beatiful REST API** data source. Done deal.
