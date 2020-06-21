@@ -43,11 +43,11 @@ In order to make it valuable for you I’m keeping it as concise as possible:
     ```php 
     // Organization
     public function approvedUsers() {
-     return $this\->hasMany('App\\User')\->where('approved', 1)\->orderBy('email');
+     return $this->hasMany('App\\User')->where('approved', 1)->orderBy('email');
     }
 
     // then somewhere you need this
-    $organization\->approvedUsers()\->latest()\->get();
+    $organization->approvedUsers()->latest()->get();
     ```
 
     Now you’re scratching your head and trying to figure out why you don’t get `latest` users. After a while you notice that they are ordered by email, so you’re tracking it down – relationship is found, so the question arises – can I change the relationship? Not really, it would break some functionality, probably untested, so it is not the way to go. Eventually it seems that the only way is a NEW relationhsip. Not good at all.
@@ -76,22 +76,19 @@ In order to make it valuable for you I’m keeping it as concise as possible:
 8. `order by relation`: Custom relation definitely **GOOD**, but ordering nope. While it is valid, it’s dangerous as well. You should **NEVER depend on the collection ordering** if you don’t know how many items collection has (and it must be rather small collection). Imagine this code when your page grows from 20 `Topics` to 20 thousands `Topics` – then every single pageload is looong seconds, sometimes memory exhausted errors occur etc. Databases are pretty good with ordering, use them.
 
 9. `when`: I totally agree with the comment: _It may not feel shorter or more elegant_ – True, it is not shorter, nor more elegant, nor better in any way for me. Here’s what I recommend:
-
-if ($request->has('role')) { // I know the intent already $query->where('role_id', $request->get('role')); // then following action } // vs // Reading this I am not sure what false means, no idea what $role will be // in the closure, I have to spend a few seconds analyzing it every time. // It adds up in big codebase and I love to avoid unnecessary overload $query->when(request('role', false), function ($q, $role) { return $q->where('role_id', $role); });
  
     ```php
-    if ($request\->has('role')) { // I know the intent already
-
-     $query\->where('role\_id', $request\->get('role')); // then following action
-
+    if ($request->has('role')) { // I know the intent already
+     $query->where('role_d', $request->get('role')); // then following action
     }
 
     // vs
+
     // Reading this I am not sure what false means, no idea what $role will be
     // in the closure, I have to spend a few seconds analyzing it every time.
     // It adds up in big codebase and I love to avoid unnecessary overload
-    $query\->when(request('role', false), function ($q, $role) {
-     return $q\->where('role\_id', $role);
+    $query->when(request('role', false), function ($q, $role) {
+     return $q->where('role_d', $role);
     });
     ```
 
