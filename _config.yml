@@ -1,17 +1,39 @@
-#Jekyll configuration
-name: SoftOnSofa.com
-description: development with pleasure
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: SoftOnSofa
+#email: jarek@softonsofa.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Writing codes for OSS and Aspire FT in Singapore.
+  Contributor to open-source frameworks and packages, father, a close friend with barbell.
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jarektkaczyk.github.io"
-markdown: GFM
+
+twitter_username: softonsofa
+github_username:  jarektkaczyk
+
+show_excerpts: false
+
+# Build settings
+markdown: kramdown
+#theme: jekyll-theme-cayman
+theme: minima
+plugins:
+  - jekyll-feed
+
+permalink: :title/
 highlighter: rouge
 
-theme: jekyll-theme-cayman
-
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-
-include:
- - files
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
