@@ -9,7 +9,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Writing codes for OSS and Aspire FT in Singapore.
   Contributor to open-source frameworks and packages, father, a close friend with barbell.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://jarektkaczyk.github.io"
+url: "https://softonsofa.com"
 
 twitter_username: softonsofa
 github_username:  jarektkaczyk
