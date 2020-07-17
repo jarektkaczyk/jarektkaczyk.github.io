@@ -76,17 +76,17 @@ class TransferRequest extends ApiRequest
     {
         return [
             'amount' => 'required|int',
-            'holder*name' => 'required|string',
-            'currency*code' => new ValidCurrencyRule($this),
-            'account*number' => new ValidAccountNumberRule($this),
+            'holder_name' => 'required|string',
+            'currency_code' => new ValidCurrencyRule($this),
+            'account_number' => new ValidAccountNumberRule($this),
         ];
     }
 
     function getTransfer(): TransferEntity
     {
         return new TransferEntity(
-            Money::make($this->input('amount'), $this->input('currency*code')),
-            TransactionParty::make($this->input('account*number', $this->input('holder*name')))
+            Money::make($this->input('amount'), $this->input('currency_code')),
+            TransactionParty::make($this->input('account_number', $this->input('holder_name')))
         );
     }
 }
