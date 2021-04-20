@@ -31,7 +31,8 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
-gem "github-pages", "~> 208"
+gem "github-pages", ">= 208"
+gem "kramdown", ">= 2.3.1"
 
 #gem "github-pages", group: :jekyll_plugins
 gem "jekyll-redirect-from", group: :jekyll_plugins
