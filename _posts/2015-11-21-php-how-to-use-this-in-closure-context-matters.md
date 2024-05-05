@@ -61,19 +61,7 @@ OK, it’s not very sophisticated example, but you get the idea already (you can
 
 Important thing to remember though is that php doesn’t care about the context, in which we invoke the process but only where the closure is created. That being said, a workaround for this is as simple as having additional class, providing instance context:
 
-```php
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-	
- 
+```php 
 class ClosureFactory
 {
   public function getClosure()
