@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://softonsofa.com/sitemap.xml
+Sitemap: https://softonsofa.com/pol-civ/sitemap.xml
